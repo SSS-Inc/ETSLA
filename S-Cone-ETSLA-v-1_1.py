@@ -545,9 +545,9 @@ elif profile == "etsla":
     ssh.exec_command("uci set firewall.@redirect[5].dest='lan'")
     ssh.exec_command("uci set firewall.@redirect[5].proto='tcp udp'")
     ssh.exec_command("uci set firewall.@redirect[5].dest_ip='192.168.1.100'")
-    ssh.exec_command("uci set firewall.@redirect[5].dest_port='8100'")
+    ssh.exec_command("uci set firewall.@redirect[5].dest_port='22'")
     ssh.exec_command("uci set firewall.@redirect[5].name='1DHP_ssh'")
-    ssh.exec_command("uci set firewall.@redirect[5].src_dport='22'")
+    ssh.exec_command("uci set firewall.@redirect[5].src_dport='8100'")
 
     time.sleep(2)
     exec_command("uci add firewall redirect")
